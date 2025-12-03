@@ -53,13 +53,13 @@ genres_input = input("Enter Favourite Genres (comma separated): ")
 
 genres = [g.strip().lower() for g in genres_input.split(",")]
 
-valid_found = False
+valid_found = True
 
 print("\n--- Movie Recommendations ---")
 
 for genre in genres:
     if genre in movies:
-        valid_found = True
+        valid_found = False
         required_age = age_limits[genre]
 
         if age >= required_age:
